@@ -1,0 +1,284 @@
+@import "_var";
+@keyframes showName {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+    60% {
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes showTitles {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.first-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+    width: 90%;
+}
+#navbar {
+    display: block;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 5;
+    background-color: $deep_blue;
+    font-family: $Montserrat;
+}
+#navbar a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+#navbar a:hover {
+    background-color: $grey_blue;
+    color: white;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.animated-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $deep_blue;
+    height: 100%;
+    width: 60%;
+}
+.animated-titles > div {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 60%;
+}
+.animated-titles > div div {
+    padding: 2vmin 0;
+    position: absolute;
+}
+.animated-titles > div.text-top {
+    height: 40%;
+    font-family: $Montserrat;
+    font-size: 5vw;
+    border-bottom: 1vmin solid #000;
+    top: 9.5%;
+}
+.animated-titles > div.text-top div {
+    animation: showName 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    bottom: 0;
+}
+.animated-titles > div.text-top div span:first-child {
+    color: $grey_blue;
+}
+.animated-titles > div.text-bottom {
+    font-family: $Montserrat;
+    font-size: 3vw;
+    bottom: 0;
+}
+.animated-titles > div.text-bottom div {
+    animation: showTitles 0.5s;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+    top: 100;
+    transform: translate(0, -100%);
+}
+
+.second-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    color: white;
+    background: $deep_blue;
+}
+.anchor {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-top: -720px; 
+    visibility: hidden;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: aliceblue;
+    height: 100%;
+    width: 85%;
+    // background-color: red; // temp. background color
+}
+.about-container > div {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 50%;
+    width: 100%;
+    // background-color: aquamarine; // temp. background color
+}
+.title {
+    width:50%;
+    font-size: 6vw;
+    font-family: $Montserrat;
+    color: rgba(255, 255, 255, 0.641);
+    text-align: center;
+}
+.text {
+    width: 50%;
+    font-size: 4vmin;
+    text-align: center;
+}
+
+.third-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260vh;
+}
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90%;
+    width: 85%;
+    // background-color: red;
+}
+.projects-container > div.projects-title {
+    width: 100%;
+}
+.projects-container > div:first-child {
+    color: $deep_blue;
+    text-align: left;
+}
+.projects-container > div.list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 70%;
+}
+div.list-container > div.project {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 60px;
+    // background-color: rgb(255, 255, 159); // temp. background color
+}
+div.project > div.image-box {
+    width: 50%;
+    height: 80%;
+    background-color: #000; // temp. background color
+    border-radius: 10px;
+}
+div.project > div.text-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 60%;
+    padding: 20px;
+    background-color: $deep_blue; // temp. background color
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.right {
+    margin-left: -2em;
+}
+.left {
+    margin-right: -2em;
+}
+div.text-box p {
+    font-size: 2.5vmin;
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+}
+div.text-box h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2vw;
+    font-weight: lighter;
+}
+div.text-box a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: $grey_blue;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-top: 1em;
+}
+.icon {
+    margin-right: 0.4em;
+}
+.picture1 {
+    background: url(../images/yt2sp.png) no-repeat center / cover;
+}
+.picture2 {
+    z-index: -1;
+}
+.picture3 {
+    background: url(../images/placeholder.svg) no-repeat center / cover;
+}
+
+.fourth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    color: white;
+    background: $deep_blue;
+}
+
+@media only screen and (max-width: 768px) {
+    .projects-container > div.list-container {
+        width: 100%;
+    }
+    div.list-container > div.project {
+        flex-direction: column;
+    }
+    div.project > div.image-box {
+        width: 100%;
+    }
+    div.project > div.text-box {
+        width: 70%;
+        margin: 0;
+        margin-top: -2em;
+    }
+
+}

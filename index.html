@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kris' Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="navbar" class="navigation">
+        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#home">Home</a>
+    </div>
+    <section id="home" class="first-page">
+        <div class="home-container">
+            <div class="animated-titles">
+                <div class="text-top">
+                    <div>
+                        <span>Kristian Paul</span>
+                        <span>Maglantay</span>
+                    </div>
+                </div>
+                <div class="text-bottom">
+                    <div>
+                        <span>Aspiring Web Developer / Data Scientist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-page">
+        <span class="anchor" id="about"></span>
+        <div class="about-container">
+            <div class="about">
+                <div class="title">
+                    <span>ABOUT ME</span>
+                </div>
+                <div class="text">
+                    <span>I am a determined indivudal looking to expand my skills as a Full-Stack Developer or a Data Scientist.</span>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="text">
+                    <span>HTML5, CSS, SASS, Java, Python, MySQL, Jupyter Notebook</span>
+                </div>
+                <div class="title">
+                    <span>SKILLS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="third-page">
+        <div class="projects-container">
+            <div class="projects-title title">
+                <span>PROJECTS</span>
+            </div>
+            <div class="list-container">
+                <div class="project">
+                    <div class="image-box picture1"></div>
+                    <div class="text-box right">
+                        <h1>Youtube to Spotify</h1>
+                        <p>Script that gets songs in a Youtube playlist and creates a Spotifty playlist with those songs.</p>
+                        <p>Uses Youtube API, Spotify API, Youtube-DL and some json parsing to locate the song titles and find them in Spotify.</p>
+                        <a class="button" href="https://github.com/kripm/youtubeToSpotify" target="_blank">
+                            <span class="icon"><img src="/images/code_icon.svg" alt="SVG Code icon"></img></span>
+                            <span>Code</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="text-box left">
+                        <span>heillo</span>
+                    </div>
+                    <div class="image-box picture2"></div>
+                </div>
+                <div class="project">
+                    <div class="image-box picture3"></div>
+                    <div class="text-box right">
+                        <h1>Placeholder</h1>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui quisquam, ullam nihil ea totam laboriosam officia itaque commodi. Repudiandae, distinctio.</p>
+                        <a class="button" href="https://github.com/kripm/youtubeToSpotify" target="_blank">
+                            <span class="icon"><img src="/images/code_icon.svg" alt="SVG Code icon"></img></span>
+                            <span>Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="fourth-page">
+        <div class="contacts-container">
+            <div class="contact-text title">
+                <span>CONTACT</span>
+            </div>
+            <div class="icons">
+
+            </div>
+            <div class="back-to-top">
+
+            </div>
+        </div>
+    </section>
+
+<script>
+    window.onscroll = function() {stickyNav()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function stickyNav() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+</body>
+</html>
