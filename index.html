@@ -70,7 +70,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project alt">
                     <div class="text-box left">
                         <h1>TicTacToe</h1>
                         <p>Java game with UI and AI opponents. Has options for Player vs AI, Player vs Player, and AI vs AI.</p>
@@ -102,10 +102,23 @@
                 <span>CONTACT</span>
             </div>
             <div class="icons">
-
+                <a href="https://github.com/kripm" target="_blank">
+                    <img class="contact-icon" src="images/github_icon.svg" alt="GitHub icon">
+                </a>
+                <a href="http://linkedin.com" target="_blank">
+                    <img class="contact-icon" src="images/linkedin_icon.svg" alt="Linkedin icon">
+                </a>
+                <a href="http://instagram.com/krisp.m_" target="_blank">
+                    <img class="contact-icon" src="images/instagram_icon.svg" alt="Instagram icon">
+                </a>
+                <a href="mailto:krismaglantay2@gmail.com">
+                    <img class="contact-icon" src="images/email_icon.svg" alt="Email icon">
+                </a>   
             </div>
             <div class="back-to-top">
-
+                <button onclick="goToTop()" id="btn" title="Go to top">
+                    <img src="images/arrow.svg" alt="Arrow up icon">
+                </button>
             </div>
         </div>
     </section>
@@ -122,6 +135,13 @@
         } else {
             navbar.classList.remove("sticky");
         }
+    }
+
+    button = document.getElementById("btn");
+
+    function goToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 </script>
 

@@ -55,6 +55,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Roboto, Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 .first-page {
@@ -151,7 +152,7 @@ body {
 .animated-titles > div.text-top {
   height: 40%;
   font-family: "Montserrat", sans-serf;
-  font-size: 5vw;
+  font-size: 5vmax;
   border-bottom: 1vmin solid #000;
   top: 9.5%;
 }
@@ -172,7 +173,7 @@ body {
 
 .animated-titles > div.text-bottom {
   font-family: "Montserrat", sans-serf;
-  font-size: 3vw;
+  font-size: 3vmax;
   bottom: 0;
 }
 
@@ -198,7 +199,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70vh;
+  height: 70vmin;
   color: white;
   background: #15233c;
 }
@@ -422,9 +423,88 @@ div.text-box a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70vh;
+  height: 60vmin;
   color: white;
   background: #15233c;
+}
+
+.contacts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: aliceblue;
+  height: 100%;
+  width: 85%;
+}
+
+.contacts-container > div.contact-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+}
+
+.contacts-container > div.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 40vmin;
+}
+
+div.icons a {
+  margin: 10%;
+}
+
+.contact-icon {
+  width: 15vmin;
+  height: 15vmin;
+}
+
+.contacts-container > div.back-to-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 12%;
+  width: 100%;
+}
+
+div.back-to-top button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 468px) {
+  .animated-titles > div.text-top {
+    font-size: 3vmax;
+  }
+  .animated-titles > div.text-bottom {
+    font-size: 2vmax;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -436,6 +516,14 @@ div.text-box a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .alt > div:first-child {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .alt > div.text-box {
+    margin-top: -2em;
   }
   div.project > div.image-box {
     width: 100%;

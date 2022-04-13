@@ -24,6 +24,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .first-page {
@@ -87,7 +88,7 @@ body {
 .animated-titles > div.text-top {
     height: 40%;
     font-family: $Montserrat;
-    font-size: 5vw;
+    font-size: 5vmax;
     border-bottom: 1vmin solid #000;
     top: 9.5%;
 }
@@ -102,7 +103,7 @@ body {
 }
 .animated-titles > div.text-bottom {
     font-family: $Montserrat;
-    font-size: 3vw;
+    font-size: 3vmax;
     bottom: 0;
 }
 .animated-titles > div.text-bottom div {
@@ -117,7 +118,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 70vmin;
     color: white;
     background: $deep_blue;
 }
@@ -264,9 +265,57 @@ div.text-box a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    height: 60vmin;
     color: white;
     background: $deep_blue;
+}
+.contacts-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: aliceblue;
+    height: 100%;
+    width: 85%;
+}
+.contacts-container > div.contact-text {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+.contacts-container > div.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40vmin;
+}
+div.icons a {
+    margin: 10%;
+}
+.contact-icon {
+    width: 15vmin;
+    height: 15vmin;
+}
+.contacts-container > div.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 12%;
+    width: 100%;
+}
+div.back-to-top button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 468px) {
+    .animated-titles > div.text-top {
+        font-size: 3vmax;
+    }
+    .animated-titles > div.text-bottom {
+        font-size: 2vmax;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -276,6 +325,12 @@ div.text-box a:hover {
     div.list-container > div.project {
         flex-direction: column;
     }
+    .alt > div:first-child {
+        order: 1;
+    }
+    .alt > div.text-box {
+        margin-top: -2em;
+    }
     div.project > div.image-box {
         width: 100%;
     }
@@ -284,5 +339,4 @@ div.text-box a:hover {
         margin: 0;
         margin-top: -2em;
     }
-
 }
