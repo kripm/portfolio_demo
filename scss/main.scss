@@ -243,6 +243,9 @@ div.text-box a {
     border-radius: 7px;
     margin-top: 1em;
 }
+div.text-box a:hover {
+    background-color: rgb(53, 67, 93);
+}
 .icon {
     margin-right: 0.4em;
 }
@@ -250,6 +253,7 @@ div.text-box a {
     background: url(../images/yt2sp.png) no-repeat center / cover;
 }
 .picture2 {
+    background: url(../images/tictactoe.jpg) no-repeat center / cover;
     z-index: -1;
 }
 .picture3 {

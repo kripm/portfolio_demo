@@ -391,6 +391,10 @@ div.text-box a {
   margin-top: 1em;
 }
 
+div.text-box a:hover {
+  background-color: #35435d;
+}
+
 .icon {
   margin-right: 0.4em;
 }
@@ -400,6 +404,7 @@ div.text-box a {
 }
 
 .picture2 {
+  background: url(../images/tictactoe.jpg) no-repeat center/cover;
   z-index: -1;
 }
 
