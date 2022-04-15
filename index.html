@@ -44,7 +44,7 @@
             </div>
             <div class="skills">
                 <div class="text">
-                    <span>HTML5, CSS, SASS, Java, Python, MySQL, Jupyter Notebook</span>
+                    <span>HTML5, CSS, SASS, Java, Python, MySQL, Jupyter Notebook, Git</span>
                 </div>
                 <div class="title">
                     <span>SKILLS</span>
@@ -123,27 +123,7 @@
         </div>
     </section>
 
-<script>
-    window.onscroll = function() {stickyNav()};
-
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-
-    function stickyNav() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-
-    button = document.getElementById("btn");
-
-    function goToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-</script>
-
+    <script src="js/stickyNav.js"></script>
+    <script src="js/goToTop.js"></script>
 </body>
 </html>
