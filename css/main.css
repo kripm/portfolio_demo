@@ -501,8 +501,8 @@ div.back-to-top button {
 }
 
 div.back-to-top button:hover {
-  -webkit-filter: invert(25%);
-          filter: invert(25%);
+  -webkit-filter: invert(30%);
+          filter: invert(30%);
 }
 
 @media only screen and (max-width: 468px) {
