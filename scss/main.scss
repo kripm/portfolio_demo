@@ -193,6 +193,7 @@ div.list-container > div.project {
     padding-bottom: 60px;
 }
 div.project > div.image-box {
+    z-index: -1;
     width: 50%;
     height: 80%;
     border-radius: 10px;
@@ -208,6 +209,26 @@ div.project > div.text-box {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+}
+div.project > div:first-child {
+    opacity: 0;
+    transform: translateX(-9em);
+    transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1),
+                opacity 0.25s 0.25s ease-in;
+    will-change: transform, opacity;
+    pointer-events: none;
+}
+div.project > div:nth-child(2) {
+    opacity: 0;
+    transform: translateX(9em);
+    transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1),
+                opacity 0.25s 0.25s ease-in;
+    will-change: transform, opacity;
+    pointer-events: none;
+}
+div.project > div.is-visible {
+    transform: translate(0,0);
+    opacity: 1;
 }
 .right {
     margin-left: -2em;
@@ -246,7 +267,6 @@ div.text-box a:hover {
 }
 .picture2 {
     background: url(../images/tictactoe.jpg) no-repeat center / cover;
-    z-index: -1;
 }
 .picture3 {
     background: url(../images/placeholder.svg) no-repeat center / cover;

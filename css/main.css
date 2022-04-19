@@ -325,6 +325,7 @@ div.list-container > div.project {
 }
 
 div.project > div.image-box {
+  z-index: -1;
   width: 50%;
   height: 80%;
   border-radius: 10px;
@@ -350,6 +351,36 @@ div.project > div.text-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+div.project > div:first-child {
+  opacity: 0;
+  -webkit-transform: translateX(-9em);
+          transform: translateX(-9em);
+  -webkit-transition: opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.25s 0.25s ease-in;
+  transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+div.project > div:nth-child(2) {
+  opacity: 0;
+  -webkit-transform: translateX(9em);
+          transform: translateX(9em);
+  -webkit-transition: opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.25s 0.25s ease-in;
+  transition: transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.25s 0.25s ease-in, -webkit-transform 0.5s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+div.project > div.is-visible {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
 }
 
 .right {
@@ -403,7 +434,6 @@ div.text-box a:hover {
 
 .picture2 {
   background: url(../images/tictactoe.jpg) no-repeat center/cover;
-  z-index: -1;
 }
 
 .picture3 {
